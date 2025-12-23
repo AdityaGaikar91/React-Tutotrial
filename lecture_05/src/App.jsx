@@ -1,6 +1,7 @@
 import AddSub from "./components/AddSub"
 import Buttons from "./components/Buttons"
 import Person from "./components/Person"
+import Playground from "./components/Playground"
 import Profile from "./components/Profile"
 
 
@@ -12,7 +13,8 @@ function App() {
 
       {/* <Person naam= "Aditya"/>
       <Buttons /> */}
-      <AddSub/>
+      {/* <AddSub/> */}
+      <Playground/>
     </div>
   )
 }

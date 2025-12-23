@@ -7,7 +7,7 @@ function AddSub() {
     const[count, setCount] = useState(0);
 
     function handleadd(){
-        console.log(setCount(count+1));
+        console.log(setCount((c) => c + 1));
     }
 
     function handlesub(){
@@ -15,7 +15,9 @@ function AddSub() {
             count
         }
         else{
-            console.log(setCount(count-1)); 
+            console.log(setCount((c) => c - 1)); 
+            console.log(setCount((c) => c - 1)); 
+            console.log(setCount((c) => c - 1)); 
         }
         
     }
