@@ -5,21 +5,13 @@ function ApiCall() {
   const [apiCall, setApiCall] = useState([]);
 
   useEffect(function () {
-
-    // axios with promise
-    function calling() {
-        const API = "https://jsonplaceholder.typicode.com/todos"
-        axios.get(API)
-        .then((data) => setApiCall(data.data))
-        .catch((err) => console.log("Error: ", err))
+    //------------------------axios with async await------------------------------------
+    async function calling(){
+      const API = "https://jsonplaceholder.typicode.com/todos";
+      let resp = await axios.get(API)
+      setApiCall(resp.data)
     }
     calling()
-
-
-
- 
-
-
   }, []);
 
   return (
@@ -39,6 +31,19 @@ function ApiCall() {
 }
 
 export default ApiCall;
+
+
+
+
+
+   // ---------------------axios with promise----------------------------
+    // function calling() {
+    //     const API = "https://jsonplaceholder.typicode.com/todos"
+    //     axios.get(API)
+    //     .then((data) => setApiCall(data.data))
+    //     .catch((err) => console.log("Error: ", err))
+    // }
+    // calling()
 
 
 // --------------------fetch with async await-------------------------------

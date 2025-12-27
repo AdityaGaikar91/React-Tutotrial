@@ -3,6 +3,7 @@ import EmployeeCard from './components/EmployeeCard'
 import Cartoon from './components/Cartoon'
 import Vegetables from './components/Vegetables'
 import Bouquet from './components/Bouquet'
+import Effect from './components/Effect'
 
 function App() {
 
@@ -88,6 +89,7 @@ function App() {
       {/* <Cartoon cartoons={cartoons}/> */}
       {/* <Vegetables vegetables={vegetables}/> */}
       <Bouquet bouquet={bouquet}/>
+      <Effect/>  
     </div>
   )
 }
