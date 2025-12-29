@@ -19,10 +19,12 @@ function Products() {
   return (
     <div>
         {
-            product.map(pro => {
+            product.map((pro) => {
                 return(
                     <div>
-                        <h1></h1>
+                        <h1>{pro.name}</h1>
+                        <p>Price: {pro.price}</p>
+                        <p>Quantity: {pro.quantity}</p>
                     </div>
                 )
             })
