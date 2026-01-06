@@ -6,9 +6,9 @@ import Lifecycle from './components/Lifecycle'
 function App(){
   return (
     <div>
-      {/* <Online/> */}
+      <Online/>
       {/* <Product/> */}
-      <Lifecycle/>
+      {/* <Lifecycle/> */}
     </div>
   )
 }

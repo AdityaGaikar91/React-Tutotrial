@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 function Online() {
 
     const[user, setUser] = useState([]);
+    const[showHighlight, setShowHighlight] = useState(false);
+    
 
     useEffect(()=>{
         async function call(){
@@ -16,13 +18,18 @@ function Online() {
   return (
     <div>
         <h1>Online and offline</h1>
+        <button onClick={() => setShowHighlight(!showHighlight)}>
+          {showHighlight ? 'Disable Colors' : 'Enable Colors'}
+        </button>
         {
             user.map((item,index) => {return(
 
-                <div style={{border:"1px solid black", color: item.status === 'Online'? 'green': 'red'}} key={index}>
+                <div style={{border:"1px solid black", color: showHighlight ? (item.status === 'Online'? 'green': 'red') : 'inherit'}} key={index}>
                     <h1>Name: {item.name}</h1>
                     <h1>Status: {item.status}</h1>
                 </div>
+
+                
 
             )})
         }
