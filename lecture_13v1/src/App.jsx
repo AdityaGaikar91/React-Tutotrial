@@ -1,4 +1,3 @@
-import React from 'react'
 import Sam from './components/Sam'
 
 function App() {

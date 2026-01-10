@@ -1,31 +1,37 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { CountContext } from './Contex'
 
 function Sam() {
     const[count, setCount] = useState(0)
   return (
     <div>
-        <Count count={count}/>
-        <Button count={count} setCount={setCount}/>
+        <CountContext.Provider value={count}>
+            <Count setCount={setCount}/>
+        </CountContext.Provider>
+        
     </div>
   )
 }
 
 
-function Button({count, setCount}) {
+function Buttons({setCount}) {
+    let countt = useContext(CountContext)
     return(
         <div>
-            <button onClick={()=>setCount(count + 1)}>Inc</button>
-            <button onClick={()=>setCount(count<=0? count: count - 1)}>Dec</button>
+            <button onClick={()=>setCount(countt + 1)}>Inc</button>
+            <button onClick={()=>setCount(countt<=0? countt: countt - 1)}>Dec</button>
         </div>
     )
 }
 
 
 
-function Count({count}) {
+function Count({setCount}) {
+    let countt = useContext(CountContext)
     return(
         <div>
-            <h1>Count: {count}</h1> 
+            <h1>Count: {countt}</h1> 
+            <Buttons setCount={setCount}/>
         </div>
     )
 }
