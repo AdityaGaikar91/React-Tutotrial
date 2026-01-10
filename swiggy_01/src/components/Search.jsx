@@ -9,7 +9,7 @@ function Search({restArr, setAllRestArr}) {
     
   return (
     <div>
-        <input onChange={(e) => handleSearch(e.target.value)} type="text" placeholder='Search The Restaurant' className='border-2 to-black rounded'/>
+        <input onChange={(e) => handleSearch(e.target.value)} type="text" placeholder='Search The Restaurant' className='border to-black rounded'/>
     </div>
   )
 }

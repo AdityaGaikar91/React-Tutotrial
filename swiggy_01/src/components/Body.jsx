@@ -6,7 +6,7 @@ import Search from './Search';
 function Body() {
 
     let restArr = ApiCalling();
-    console.log(restArr)
+    // console.log(restArr)
 
     const[allRestArr, setAllRestArr] = useState(restArr)
     const[isClicked, setIsClicked] = useState(false)
