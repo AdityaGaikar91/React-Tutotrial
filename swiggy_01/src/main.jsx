@@ -8,6 +8,9 @@ import Offers from './components/Offers.jsx'
 import Help from './components/Help.jsx'
 import Errorr from './components/Errorr.jsx'
 import Signin from './components/Signin.jsx'
+import RestaurantDetail from './components/RestaurantDetail.jsx'
+import RealTimeClock from './components/RealTimeClock.jsx'
+import Cart from './components/Cart.jsx'
 
 
 let appRouter = createBrowserRouter([
@@ -31,6 +34,18 @@ let appRouter = createBrowserRouter([
       {
         path: '/signin',
         element: <Signin/>
+      },
+      {
+        path: '/restaurant/:id',
+        element: <RestaurantDetail/>
+      },
+      {
+        path:'/clock',
+        element: <RealTimeClock/>
+      },
+      {
+        path:'/cart',
+        element: <Cart/>
       }
     ]
   }
